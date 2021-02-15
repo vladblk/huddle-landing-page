@@ -1,0 +1,91 @@
+:root {
+  --color-primary-violet: hsl(257, 40%, 49%);
+  --color-primary-soft-magenta: hsl(300, 69%, 71%);
+
+  --font-body: 'Poppins', sans-serif;
+  --font-heading: 'Open Sans', sans-serif;
+
+  --box-shadow-white: 5px 5px 20px rgba(209, 198, 198, 0.89);
+  --box-shadow-magenta: 5px 5px 15px hsl(300, 47%, 60%);
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+
+  font-family: var(--font-body);
+
+  background-image: url('./images/bg-desktop.svg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: var(--color-primary-violet);
+}
+
+.content {
+  max-width: 120rem;
+  margin: 2.5rem auto;
+}
+
+.hero-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem 0;
+
+  color: #fff;
+}
+
+.hero-text {
+  margin-left: 5rem;
+}
+
+.hero-text-header {
+  font-size: 4rem;
+  font-family: var(--font-heading);
+}
+
+.hero-text-description {
+  margin: 3rem 0;
+
+  font-size: 1.5rem;
+}
+
+.register-btn {
+  background: none;
+  border: none;
+  padding: 2rem 8rem;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  box-shadow: var(--box-shadow-white)
+}
+
+.btn {
+  transform: translateY(0);
+  background-color: #fff;
+  color: var(--color-primary-violet);
+  animation: all .2s ease-in-out;
+}
+
+.btn:focus {
+  outline: none;
+  transform: translateY(2px);
+  box-shadow: var(--box-shadow-white)
+}
+.btn:hover {
+  box-shadow: var(--box-shadow-magenta);
+  background-color: var(--color-primary-soft-magenta);
+  color: #fff;
+
+  cursor: pointer;
+}
